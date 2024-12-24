@@ -117,19 +117,19 @@ body.light-mode {
     color: #ffffff;
 }
 
-.mode-change i.light-mode {
-    color: orange;
-}
-
 .mode-change a .tooltip.light-mode {
     background-color: #000000;
     color: #ffffff;
 }
 
+.navbar a{
+    text-decoration: none;
+}
 
-
-
-
+.navbar span:hover{
+    color:bisque; 
+    
+}
 
 
 
