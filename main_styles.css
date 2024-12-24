@@ -19,12 +19,12 @@ body {
 }
 
 .navbar{
+    margin-left:100px;
     width:45%;
 }
 
 .navbar ul {
     list-style: none;
-    margin-left:10px;
     padding: 0; 
     display: flex;
     justify-content:center; 
@@ -53,7 +53,7 @@ body {
 .mode-change{
     display: flex;
     margin-left:auto;
-    margin-right:15px;
+    margin-right:30px;
 }
 
 .mode-change i {
@@ -95,6 +95,35 @@ body {
 .mode-change  a:hover .tooltip {
     visibility: visible;
     opacity: 1;
+}
+
+/* For Light mode */
+
+body.light-mode {
+    margin: 0;
+    height: 100vh;
+    background-color: #ffffff; 
+    background-image: 
+        linear-gradient(rgba(200, 200, 200, 0.2) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(200, 200, 200, 0.2) 1px, transparent 1px); 
+    background-size: 4px 4px;
+}
+
+.header.light-mode {
+    background-color: #000000;
+}
+
+.navbar li.light-mode {
+    color: #ffffff;
+}
+
+.mode-change i.light-mode {
+    color: orange;
+}
+
+.mode-change a .tooltip.light-mode {
+    background-color: #000000;
+    color: #ffffff;
 }
 
 
