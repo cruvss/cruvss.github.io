@@ -3,7 +3,7 @@ name: Deploy Website
 on:
   push:
     branches:
-      - main  # Adjust this if you're using a different default branch
+      - main  # Default branch to trigger the deployment
 
 jobs:
   build-and-deploy:
@@ -15,22 +15,15 @@ jobs:
         uses: actions/checkout@v3
 
 
-      # Step 3: Replace the placeholder in the HTML file with the secret
+      # Step 3: Replace placeholder in the HTML file
       - name: Inject EMAILJS Public Key into HTML
         run: |
-          sed -i "s/REPLACE_WITH_PUBLIC_KEY/${{ secrets.EMAILJS_PUBLIC_KEY }}/g" main.html
+          sed -i "s/REPLACE_WITH_PUBLIC_KEY/${{ secrets.EMAILJS_PUBLIC_KEY }}/g" index.html
 
-      # Step 4: Set up Git configuration
-      - name: Set up Git config
-        run: |
-          git config user.name "sachin koirala"
-          git config user.email "sachinkoirala9999@gmail.com"
-          git remote set-url origin https://github.com/${{ github.repository }}.git  # Update the remote URL
-
-      # Step 5: Deploy to GitHub Pages
+      # Step 4: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .  # Root folder for deployment
-          destination_branch: gh-pages  # Ensure this branch is used
+          publish_branch: gh-pages  # Correct parameter for deployment branch
