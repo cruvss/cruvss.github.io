@@ -22,8 +22,8 @@ jobs:
       # Step 3: Set up Git configuration
       - name: Set up Git config
         run: |
-          git config user.name "cruvss"
-          git config user.email "cruvss@users.noreply.github.com"
+          git config user.name "sachin koirala"
+          git config user.email "sachinkoirala9999@gmail.com"
           git remote add origin https://github.com/${{ github.repository }}.git
 
       # Step 4: Deploy to GitHub Pages
