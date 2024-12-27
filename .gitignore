@@ -1,3 +1,4 @@
 dump/
 .env
 # config.js
+.vscode/
