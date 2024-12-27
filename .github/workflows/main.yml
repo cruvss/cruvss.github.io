@@ -14,19 +14,26 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Replace the placeholder in the HTML file with the secret
+      # Step 2: Validate Secrets
+      - name: Validate EMAILJS Public Key
+        if: ${{ secrets.EMAILJS_PUBLIC_KEY == '' }}
+        run: |
+          echo "Error: EMAILJS_PUBLIC_KEY is not set."
+          exit 1
+
+      # Step 3: Replace the placeholder in the HTML file with the secret
       - name: Inject EMAILJS Public Key into HTML
         run: |
           sed -i "s/REPLACE_WITH_PUBLIC_KEY/${{ secrets.EMAILJS_PUBLIC_KEY }}/g" index.html
 
-      # Step 3: Set up Git configuration
+      # Step 4: Set up Git configuration
       - name: Set up Git config
         run: |
           git config user.name "sachin koirala"
           git config user.email "sachinkoirala9999@gmail.com"
-          git remote set-url origin main  
+          git remote set-url origin https://github.com/${{ github.repository }}.git  # Update the remote URL
 
-      # Step 4: Deploy to GitHub Pages
+      # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
