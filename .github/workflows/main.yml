@@ -24,12 +24,12 @@ jobs:
         run: |
           git config user.name "sachin koirala"
           git config user.email "sachinkoirala9999@gmail.com"
-          git remote set-url origin https://github.com/${{ github.repository }}.git  # Use set-url to update the existing remote
+          git remote set-url origin https://github.com/${{ github.repository }}.git
 
       # Step 4: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages  # Correct input key
           publish_dir: .  # Root folder for deployment
-          destination_branch: gh-pages  # Ensure this branch is used
