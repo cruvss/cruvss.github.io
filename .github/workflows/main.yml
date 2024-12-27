@@ -26,6 +26,8 @@ jobs:
           git config user.email "sachinkoirala9999@gmail.com"
           git remote add origin https://github.com/${{ github.repository }}.git
 
+          
+
       # Step 4: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
