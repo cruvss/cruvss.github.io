@@ -109,7 +109,7 @@ body {
 
 /* For Light mode */
 
-body.light-mode {
+/* body.light-mode {
     margin: 0;
     height: 100vh;
     background-color: #ffffff; 
@@ -130,7 +130,9 @@ body.light-mode {
 .mode-change a .tooltip.light-mode {
     background-color: #000000;
     color: #ffffff;
-}
+} */
+
+/* ---continue code--- */
 
 .navbar a{
     text-decoration: none;
@@ -213,9 +215,22 @@ a {
     background-color: #000; /* Black background */
 }
 
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .hero-content {
     max-width: 50%;
+    animation: fadeIn 1s ease-in;
 }
+
+
 
 .greeting {
     font-size: 1.2em;
@@ -434,6 +449,82 @@ footer {
   
 
 
+  /* --------------scrolldown------------------- */
+  .scroll-down {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;  /* Change to flex to align items horizontally */
+    flex-direction: row;  /* Arrange elements side by side */
+    align-items: center;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hero:hover .scroll-down {
+    opacity: 1;
+}
+
+.mouse {
+    width: 30px;
+    height: 50px;
+    border: 3px solid #FFA500;
+    border-radius: 20px;
+    position: relative;
+}
+
+.wheel {
+    width: 6px;
+    height: 10px;
+    background-color: #FFA500;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8px;
+    border-radius: 3px;
+    animation: scroll 2.5s ease-in-out infinite;
+}
+
+.scroll-text-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.scroll-text {
+    color: #FFA500;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+
+.down-arrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8px solid #FFA500;
+}
+
+.scroll-down-link {
+    display: inline-block; /* Ensure it's clickable */
+    text-decoration: none; /* Remove underline from link */
+}
+
+
+
+@keyframes scroll {
+    0% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, 10px); }  /* Reduced distance */
+    100% { transform: translate(-50%, 0); }
+}
+
+
+
+/* ----------------------- Code to make responsive ---------------------------- */
 
 
 
