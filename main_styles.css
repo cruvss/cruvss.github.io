@@ -1,3 +1,10 @@
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 10vh; /*because our header is fixed and header height is 10vh*/
+}
 
 body {
     margin: 0;
@@ -317,6 +324,114 @@ a {
 
 
 
+
+
+
+
+footer {
+    background-color: #0b0c10; /* Dark background */
+    color: #c5c6c7; /* Light text color */
+    padding: 40px 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .left-section, .right-section {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .left-section {
+    margin-right: 20px;
+  }
+  
+  .left-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .left-section p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .left-section p i {
+    margin-right: 10px;
+    color: #ff2e63; /* Icon color */
+  }
+  
+  .social-icons {
+    margin: 20px 0;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+    color: #c5c6c7;
+    font-size: 20px;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #ff2e63;
+  }
+  
+  .btn-download {
+    background-color: #ff2e63;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-download:hover {
+    background-color: #e63950;
+  }
+  
+  .right-section input,
+  .right-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #1f2833; /* Input background */
+    color: #c5c6c7; /* Input text color */
+    border: 1px solid #c5c6c7;
+    border-radius: 5px;
+  }
+  
+  .right-section textarea {
+    height: 100px;
+  }
+  
+  .btn-submit {
+    background-color: #ff2e63;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-submit:hover {
+    background-color: #e63950;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
 
 
 

@@ -17,7 +17,7 @@
         <ul>
             
             <li>
-                <a href="https://pranx.com/hacker/">
+                <a href="#home">
                     <span>
                         <i class=" fa-solid fa-house-chimney" ></i>
                         Home
@@ -26,7 +26,7 @@
             </li>
             
             <li>
-                <a href="https://pranx.com/hacker/">
+                <a href="#about">
                     <span>
                         <i class="fa-solid fa-user"></i>
                         About
@@ -36,7 +36,7 @@
 
             <li>
                 
-                <a href="https://pranx.com/hacker/">
+                <a href="#projects">
                     <span>
                     <i class="fa-solid fa-folder"></i>
                     Projects</span>
@@ -44,7 +44,7 @@
             </li>
 
             <li>
-                <a href="https://pranx.com/hacker/">
+                <a href="#tech">
                     <span>
                     <i class="fa-solid fa-gears"></i>
                     Tech</span>   
@@ -62,7 +62,7 @@
 </header>
 
 
-<section class="hero">
+<section id="home" class="hero">
     <div class="hero-content">
         <p class="greeting">HELLO!</p>
         <h1>I'm Sachin</h1>
@@ -78,7 +78,7 @@
 </section>
 
 
-<section class="About-me">
+<section id= "about" class="About-me">
     <div class="about-me-content">
         <h2>About Me</h2>
         <p>
@@ -87,7 +87,7 @@
     </div>
 </section>
 
-<section class="projects">
+<section id="projects" class="projects">
     <div class="projects-content">
         <h2>Projects</h2>
         <p>
@@ -97,7 +97,7 @@
 </section>
 
 
-<section class="Tech">
+<section id="tech" class="Tech">
     <div class="tech-content">
         <h2>Tech</h2>
         <p>
@@ -105,6 +105,47 @@
         </p>
     </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+    <div class="footer-container">
+      <div class="left-section">
+        <h2>Contact Me</h2>
+        <p><i class="fa fa-envelope"></i> contact@example.com</p>
+        <p><i class="fa fa-phone"></i> 0123456789</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <button class="btn-download">Download CV</button>
+      </div>
+      <div class="right-section">
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright © Sachin Koirala. Made with ❤️ by Easy Tutorials</p>
+    </div>
+  </footer>
+  
+
 
 
 
@@ -155,6 +196,63 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 </script>
+
+
+
+
+<!-- Script for email js -->
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+
+<script src="config.js"></script>
+<script>
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+</script>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+    
+        // Prepare parameters
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            message: message,
+        };
+    
+        // Send email
+        emailjs.send("service_neh65xp", "template_c0lxdac", templateParams)
+          .then(function(response) {
+              alert("Message sent successfully!");
+              console.log("SUCCESS!", response.status, response.text);
+          }, function(error) {
+              alert("Failed to send the message. Please try again later.");
+              console.log("FAILED...", error);
+          });
+    });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
