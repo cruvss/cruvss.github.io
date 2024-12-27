@@ -141,7 +141,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Copyright © Sachin Koirala.</p>
+      <p>Copyright © Sachin Koirala. Made with ❤️ by Easy Tutorials</p>
     </div>
   </footer>
   
@@ -206,11 +206,16 @@ document.addEventListener("DOMContentLoaded", () => {
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
 
-
-<script src="config.js"></script>
-<script>
-    emailjs.init(EMAILJS_PUBLIC_KEY);
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "r0RXEEFRsQv2sJdaN",
+      });
+   })();
 </script>
+
+
+
 
 <script>
     document.getElementById('contact-form').addEventListener('submit', function(event) {

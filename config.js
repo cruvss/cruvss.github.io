@@ -1,1 +1,0 @@
-const EMAILJS_PUBLIC_KEY = "r0RXEEFRsQv2sJdaN";
