@@ -24,7 +24,7 @@ jobs:
       # Step 3: Replace the placeholder in the HTML file with the secret
       - name: Inject EMAILJS Public Key into HTML
         run: |
-          sed -i "s/REPLACE_WITH_PUBLIC_KEY/${{ secrets.EMAILJS_PUBLIC_KEY }}/g" index.html
+          sed -i "s/REPLACE_WITH_PUBLIC_KEY/${{ secrets.EMAILJS_PUBLIC_KEY }}/g" main.html
 
       # Step 4: Set up Git configuration
       - name: Set up Git config
