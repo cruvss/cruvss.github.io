@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main_styles.css">
+    <link rel="stylesheet" href="main_styles.css?v=1.0.0">  <!--for cache busting -->
     <link rel="icon" href="images/home.svg">
     <script src="https://kit.fontawesome.com/2338e2b11b.js" crossorigin="anonymous"></script>
     <title>Home</title>
@@ -219,30 +219,45 @@ document.addEventListener("DOMContentLoaded", () => {
 <script>
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
-    
+
         // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-    
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        // Validation: Check if fields are empty
+        if (!name || !email || !message) {
+            alert("All fields are required. Please fill out the form completely.");
+            return; // Stop the function if validation fails
+        }
+
+        // Validation: Check if the email is valid
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return; // Stop the function if the email is invalid
+        }
+
         // Prepare parameters
         const templateParams = {
             from_name: name,
             from_email: email,
             message: message,
         };
-    
+
         // Send email
         emailjs.send("service_neh65xp", "template_c0lxdac", templateParams)
-          .then(function(response) {
-              alert("Message sent successfully!");
-              console.log("SUCCESS!", response.status, response.text);
-          }, function(error) {
-              alert("Failed to send the message. Please try again later.");
-              console.log("FAILED...", error);
-          });
+            .then(function(response) {
+                alert("Message sent successfully!");
+                console.log("SUCCESS!", response.status, response.text);
+                // Optionally reset the form
+                document.getElementById('contact-form').reset();
+            }, function(error) {
+                alert("Failed to send the message. Please try again later.");
+                console.log("FAILED...", error);
+            });
     });
-    </script>
+</script>
 
 
 
