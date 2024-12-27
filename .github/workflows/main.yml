@@ -3,7 +3,7 @@ name: Deploy Website
 on:
   push:
     branches:
-      - main  # Adjust if your default branch is not 'main'
+      - main  # Adjust this if you're using a different default branch
 
 jobs:
   build-and-deploy:
@@ -24,4 +24,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .  # Root folder is used for deployment
+          publish_dir: .  # Root folder for deployment
+          destination_branch: gh-pages  # Ensure this branch is used
