@@ -19,10 +19,17 @@ jobs:
         run: |
           sed -i "s/REPLACE_WITH_PUBLIC_KEY/${{ secrets.EMAILJS_PUBLIC_KEY }}/g" index.html
 
-      # Step 3: Deploy to GitHub Pages
+      # Step 3: Set up Git configuration
+      - name: Set up Git config
+        run: |
+          git config user.name "cruvss"
+          git config user.email "cruvss@users.noreply.github.com"
+          git remote add origin https://github.com/${{ github.repository }}.git
+
+      # Step 4: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .  # Root folder for deployment
-    
+          destination_branch: gh-pages  # Ensure this branch is used
