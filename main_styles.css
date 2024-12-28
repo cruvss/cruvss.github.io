@@ -18,7 +18,7 @@ body {
 }
 
 /* styling for nav bar*/
-.header {
+/* .header {
     margin: 0;
     height: 10vh;
     width: 100%;
@@ -26,7 +26,25 @@ body {
     display: flex;
     align-items: center; 
     position:fixed;
-}
+} Previous code */
+
+.header {
+    margin: 0;
+    height: 10vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* transparent backgorund lai */
+    display: flex;
+    align-items: center; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(8px); /* Apply blur to background behind the header */
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
+    z-index: 1000; /* Make sure the header is above other elements */
+} 
+/* updateed backdrop blur code */
+
+
 
 .navbar{
     margin-left:100px;
@@ -347,6 +365,7 @@ footer {
     background-color: #0b0c10; /* Dark background */
     color: #c5c6c7; /* Light text color */
     padding: 40px 20px;
+
   }
   
   .footer-container {
@@ -399,17 +418,20 @@ footer {
   }
   
   .btn-download {
-    background-color: #ff2e63;
+    background-color: #bb882b;
+    font-size:medium; 
     color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    font-weight: bold;
     transition: background-color 0.3s;
   }
   
   .btn-download:hover {
-    background-color: #e63950;
+    background-color: #ffa500;
+    color:black;
   }
   
   .right-section input,
@@ -428,25 +450,65 @@ footer {
   }
   
   .btn-submit {
-    background-color: #ff2e63;
-    color: #fff;
+    background-color: #bb882b;
+    color: #ffffff;
+    font-weight: 200px;
+    font-size: medium;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    font-weight: bold;
     transition: background-color 0.3s;
   }
   
   .btn-submit:hover {
-    background-color: #e63950;
+    background-color: #ffa500;
+    color:black;
   }
   
   .footer-bottom {
-    text-align: center;
+    text-align: left;
     margin-top: 20px;
     font-size: 14px;
+    margin-bottom: 0;
   }
+
+/* Go to Top Button */
+#go-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #bb882b;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#go-to-top:hover {
+    background-color: #ffa500;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
   
+ 
 
 
   /* --------------scrolldown------------------- */

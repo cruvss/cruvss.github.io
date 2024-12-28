@@ -154,6 +154,10 @@
     <div class="footer-bottom">
       <p>Copyright © Sachin Koirala.</p>
     </div>
+    <button id="go-to-top" title="Go to top"><i class="fa-solid fa-angle-up" style="color: #ffffff;"></i></button>
+
+
+
   </footer>
   
 
@@ -269,6 +273,36 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.log("FAILED...", error);
             });
     });
+
+
+
+
+
+
+
+
+// -------------------------script for go to top -----------------------
+// Get the "Go to Top" button and footer
+const goToTopButton = document.getElementById("go-to-top");
+const footer = document.querySelector("footer");
+
+// Detect when the footer is visible in the viewport
+window.onscroll = function () {
+    const footerPosition = footer.getBoundingClientRect();
+    const isFooterVisible = footerPosition.top <= window.innerHeight && footerPosition.bottom >= 0;
+
+    if (isFooterVisible) {
+        goToTopButton.style.display = "flex";
+    } else {
+        goToTopButton.style.display = "none";
+    }
+};
+
+// Scroll to Top Functionality
+goToTopButton.onclick = function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 </script>
 
 
