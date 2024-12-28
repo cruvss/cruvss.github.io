@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main_styles.css?v=1.0.1">  <!--for cache busting -->
+    <link rel="stylesheet" href="main_styles.css?v=1.0.3">  <!--for cache busting -->
     <link rel="icon" href="images/home.svg">
     <script src="https://kit.fontawesome.com/2338e2b11b.js" crossorigin="anonymous"></script>
     <title>Home</title>
@@ -11,12 +11,12 @@
 
 <body>
 <header class="header">
-    
+    <a class="cruvs" href="main.html"><span class="logo" >Cruvs</span></a>
     <nav class="navbar">
         <ul>
             
             <li>
-                <a href="#home">
+                <a href="#home" class="nav-link" id="nav-home">
                     <span>
                         <i class=" fa-solid fa-house-chimney" ></i>
                         Home
@@ -25,7 +25,7 @@
             </li>
             
             <li>
-                <a href="#about">
+                <a href="#about" class="nav-link" id="nav-about">
                     <span>
                         <i class="fa-solid fa-user"></i>
                         About
@@ -35,7 +35,7 @@
 
             <li>
                 
-                <a href="#projects">
+                <a href="#projects" class="nav-link" id="nav-projects">
                     <span>
                     <i class="fa-solid fa-folder"></i>
                     Projects</span>
@@ -43,7 +43,7 @@
             </li>
 
             <li>
-                <a href="#tech">
+                <a href="#tech" class="nav-link" id="nav-tech">
                     <span>
                     <i class="fa-solid fa-gears"></i>
                     Tech</span>   
@@ -109,7 +109,7 @@
 </section>
 
 
-<section class="tech">
+<section class="tech" id="tech">
     <div class="tech-content">
         <h1>Tech Stacks</h1>
         <p>Tools I use, and I'm most passionate about.</p>
@@ -225,6 +225,12 @@
                     </div>
                     <span>CSS</span>
                 </div>
+
+                <div class="card">
+                    <div class="icon html">
+                        <img src="images/figma.svg" alt="Figma">
+                    </div>
+                    <span>Figma</span>
                 
             </div>
         </div>
@@ -430,16 +436,87 @@ goToTopButton.onclick = function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
+
+
+// --------------------navbar hover active class-----------------------------
+// Wait for DOM to load
+document.addEventListener('DOMContentLoaded', () => {
+    // Get all sections and nav links
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Function to update active nav link
+    const updateActiveLink = (id) => {
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('active');
+            }
+        });
+    };
+
+    // Function to check which section is in view
+    const handleScroll = () => {
+        let currentSection = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            const scrollPosition = window.scrollY;
+            
+            // Add some offset for better UX
+            if (scrollPosition >= (sectionTop - sectionHeight/3)) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+        
+        updateActiveLink(currentSection);
+    };
+
+    // Handle click events for smooth scrolling
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Update active state
+                updateActiveLink(targetId);
+            }
+        });
+    });
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Call handleScroll initially to set active state on page load
+    handleScroll();
+
+    // Optional: Add intersection observer for better performance
+    const observerOptions = {
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                updateActiveLink(entry.target.id);
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
+
 </script>
-
-
-
-
-
-
-
-
-
 
 
 
