@@ -1,7 +1,9 @@
 
 :root {
-    --navbar-color: #a9a2e6;
-    --navbar-hover-color: rgb(204, 177, 222);
+    /* --navbar-color: #a9a2e6;
+    --navbar-hover-color: rgb(204, 177, 222); */
+    --navbar-color: rgb(204, 202, 202);
+    --navbar-hover-color: white;
 }
 html {
     scroll-behavior: smooth;
