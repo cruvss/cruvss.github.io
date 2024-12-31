@@ -3,24 +3,557 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sachin Koirala</title>
-    <link rel="stylesheet" href="index_styles.css">
-
+    <link rel="stylesheet" href="main_styles.css?v=1.0.4">  <!--for cache busting -->
+    <link rel="icon" href="images/home.svg">
+    <script src="https://kit.fontawesome.com/2338e2b11b.js" crossorigin="anonymous"></script>
+    <title>Home</title>
 </head>
+
+
 <body>
-<main class="container">
-    <div class="loader"></div>
-</main>
+<header class="header">
+    <a class="cruvs" href="main.html"><span class="logo" >Cruvs</span></a>
+    <nav class="navbar">
+        <ul>
+            
+            <li>
+                <a href="#home" class="nav-link" id="nav-home">
+                    <span>
+                        <i class=" fa-solid fa-house-chimney" ></i>
+                        Home
+                    </span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#about" class="nav-link" id="nav-about">
+                    <span>
+                        <i class="fa-solid fa-user"></i>
+                        About
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                
+                <a href="#projects" class="nav-link" id="nav-projects">
+                    <span>
+                    <i class="fa-solid fa-folder"></i>
+                    Projects</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#tech" class="nav-link" id="nav-tech">
+                    <span>
+                    <i class="fa-solid fa-gears"></i>
+                    Tech</span>   
+                </a>
+            </li>
+        </ul>   
+    </nav>
+
+    <div class="mode-change">
+        <a href="#">
+            <i class="fa-solid fa-sun"></i>
+            <span class="tooltip">Light Mode</span>
+        </a>
+    </div>
+</header>
+
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <p class="greeting">HELLO!</p>
+        <h1>I'm Sachin</h1>
+        <p class="description">ML Developer | Programmer | Tech Enthusiast</p>
+        <div class="buttons">
+            <a href="https://github.com/cruvss" class="btn btn-primary" target="_blank">View GitHub</a>
+            <a href="https://www.linkedin.com/feed/" class="btn btn-secondary" target="_blank">View LinkedIn</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="images/background.jpg" alt="Hero Image">
+    </div>
+
+<a href="#about" class="scroll-down-link">
+    <div class="scroll-down">
+        <div class="mouse">
+            <div class="wheel"></div>
+        </div>
+        <div class="scroll-text-container">
+            <span class="scroll-text">Scroll<br>Down</span>
+            <div class="down-arrow"></div>
+        </div>
+    </div>
+</a>
+
+</section>
+
+
+<section id= "about" class="About-me">
+    <div class="about-me-content">
+        <h2>About Me</h2>
+        <p>
+            I am sachin I am koirala
+        </p>
+    </div>
+</section>
+
+<section id="projects" class="projects">
+    <div class="projects-content">
+        <h2>Projects</h2>
+        <p>
+            many many projects
+        </p>
+    </div>
+</section>
+
+
+<section class="tech" id="tech">
+    <div class="tech-content">
+        <h1>Tech Stacks</h1>
+        <p>Tools I use, and I'm most passionate about.</p>
+        
+<!-- ------------------------------Database seciton------------------------ -->
+        <div class="category">
+            <h2>Databases</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon mongodb">
+                        <img src="images/mongo.svg" alt="MongoDB">
+                    </div>
+                    <span>MongoDB</span>
+                </div>
+                
+                <div class="card">
+                    <div class="icon supabase">
+                        <img src="images/supa.svg" alt="Supabase">
+                    </div>
+                    <span>Supabase</span>
+                </div>
+
+                <div class="card">
+                    <div class="icon supabase">
+                        <img src="images/mysql.svg" alt="MYSQL">
+                    </div>
+                    <span>MySQL</span>
+                </div>
+                
+            </div>
+        </div>
+
+ <!-- ---------------------------Languages Section ----------------------  -->
+        <div class="category">
+            <h2>Languages</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon python">
+                        <img src="images/python.svg" alt="Python" >
+                    </div>
+                    <span>Python</span>
+                </div>
+
+                <div class="card">
+                    <div class="icon python">
+                        <img src="images/C.svg" alt="C" >
+                    </div>
+                    <span>C</span>
+                </div>
+                <div class="card">
+                    <div class="icon python">
+                        <img src="images/cpp.svg" alt="C plus plus" >
+                    </div>
+                    <span>C++</span>
+                </div>
+                <div class="card">
+                    <div class="icon javascript">
+                        <img src="images/js.svg" alt="Javascript" >                   
+                     </div>
+                    <span>Javascript</span>
+                </div>
+                <div class="card">
+                    <div class="icon html">
+                        <img src="images/matlab.svg" alt="matlab" >
+                    </div>
+                    <span>MATLAB</span>
+            </div>
+        </div>
+
+<!-- ---------------------- Frameworks Section ---------------------- -->
+        <div class="category">
+            <h2>Frameworks / Libraries</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon pytorch">
+                        <img src="images/torch.svg" alt="PyTorch">
+                    </div>
+                    <span>PyTorch</span>
+                </div>
+                
+                <div class="card">
+                    <div class="icon TensorFlow">
+                        <img src="images/tf.svg" alt="TensorFlow">
+                    </div>
+                    <span>TensorFlow</span>
+                </div>
+
+                <div class="card">
+                    <div class="icon sklearn">
+                        <img src="images/sklearn.svg" alt="sklearn">
+                    </div>
+                    <span>sklearn</span>
+                </div>
+                
+            </div>
+        </div>
+<!-- ------------------------Designs---------------------------->
+        <div class="category">
+            <h2>Designs</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon canva">
+                        <img src="images/canva.svg" alt="Canva">
+                    </div>
+                    <span>Canva</span>
+                </div>
+                
+                <div class="card">
+                    <div class="icon photoshop">
+                        <img src="images/photoshop.svg" alt="Photoshop">
+                    </div>
+                    <span>Photoshop</span>
+                </div>
+
+                <div class="card">
+                    <div class="icon css">
+                        <img src="images/css.svg" alt="CSS">
+                    </div>
+                    <span>CSS</span>
+                </div>
+
+                <div class="card">
+                    <div class="icon html">
+                        <img src="images/figma.svg" alt="Figma">
+                    </div>
+                    <span>Figma</span>
+                
+            </div>
+        </div>
+    
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+    <div class="footer-container">
+      <div class="left-section">
+        <h2>Contact Me</h2>
+        <p><i class="fa fa-envelope"></i>sachinkoirala2016@gmail.com</p>
+        <p><i class="fa fa-phone"></i> 980000000</p>
+        <div class="social-icons">
+          <a href="www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="https://github.com/cruvss" target="_blank"><i class="fa fa-github"></i></a>
+          <a href="www.google.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <a href='https://youtu.be/dQw4w9WgXcQ?si=EQJvRJBQV9A6bDmQ' target="_blank"><button class="btn-download">Download CV</button></a>
+      </div>
+      <div class="right-section">
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright © Sachin Koirala.</p>
+    </div>
+    <button id="go-to-top" title="Go to top"><i class="fa-solid fa-angle-up" style="color: #ffffff;"></i></button>
+
+
+
+  </footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-setTimeout(() => {
-    window.location.href = "main.html"; 
-}, 2500);
+document.addEventListener("DOMContentLoaded", () => {
+    window.scrollTo(0, 0);
+    if (!sessionStorage.getItem('hasVisited')) {
+        // Create and add loader only on first visit
+        const loaderHTML = `
+            <div id="loader-wrapper">
+                <div class="container">
+                    <div class="loader"></div>
+                </div>
+            </div>
+        `;
+        document.body.insertAdjacentHTML('afterbegin', loaderHTML);
+        
+        const loader = document.getElementById("loader-wrapper");
+        
+        // Hide loader after content is loaded
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                loader.style.transition = 'opacity 0.5s ease';
+                
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    // Mark that user has visited
+                    sessionStorage.setItem('hasVisited', 'true');
+                }, 500);
+            }, 2500);
+        });
+    }
+
+
+    const modeToggle = document.querySelector(".mode-change i");
+
+    modeToggle.addEventListener("click", () => {
+        // Toggle light mode class on the body
+        document.body.classList.toggle("light-mode");
+
+        // Apply or remove light-mode class from specific elements
+        document.querySelector(".header").classList.toggle("light-mode");
+        document.querySelectorAll(".navbar li").forEach(item => {
+            item.classList.toggle("light-mode");
+        });
+        document.querySelector(".tooltip").classList.toggle("light-mode");
+
+        // Change icon and tooltip text dynamically
+        if (document.body.classList.contains("light-mode")) {
+            modeToggle.classList.replace("fa-sun", "fa-moon");
+            modeToggle.nextElementSibling.textContent = "Dark Mode";
+        } else {
+            modeToggle.classList.replace("fa-moon", "fa-sun");
+            modeToggle.nextElementSibling.textContent = "Light Mode";
+        }
+    });
 });
 </script>
+
+
+
+
+<!-- Script for email js -->
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "r0RXEEFRsQv2sJdaN",
+      });
+   })();
+</script>
+
+
+
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Get form values
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        // Validation: Check if fields are empty
+        if (!name || !email || !message) {
+            alert("All fields are required. Please fill out the form completely.");
+            return; // Stop the function if validation fails
+        }
+
+        // Validation: Check if the email is valid
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return; // Stop the function if the email is invalid
+        }
+
+        // Prepare parameters
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            message: message,
+        };
+
+        // Send email
+        emailjs.send("service_neh65xp", "template_c0lxdac", templateParams)
+            .then(function(response) {
+                alert("Message sent successfully!");
+                console.log("SUCCESS!", response.status, response.text);
+                // Optionally reset the form
+                document.getElementById('contact-form').reset();
+            }, function(error) {
+                alert("Failed to send the message. Please try again later.");
+                console.log("FAILED...", error);
+            });
+    });
+
+
+
+
+
+
+
+
+// -------------------------script for go to top -----------------------
+// Get the "Go to Top" button and footer
+const goToTopButton = document.getElementById("go-to-top");
+const footer = document.querySelector("footer");
+
+// Detect when the footer is visible in the viewport
+window.onscroll = function () {
+    const footerPosition = footer.getBoundingClientRect();
+    const isFooterVisible = footerPosition.top <= window.innerHeight && footerPosition.bottom >= 0;
+
+    if (isFooterVisible) {
+        goToTopButton.style.display = "flex";
+    } else {
+        goToTopButton.style.display = "none";
+    }
+};
+
+// Scroll to Top Functionality
+goToTopButton.onclick = function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+
+
+// --------------------navbar hover active class-----------------------------
+// Wait for DOM to load
+document.addEventListener('DOMContentLoaded', () => {
+    // Get all sections and nav links
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Function to update active nav link
+    const updateActiveLink = (id) => {
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('active');
+            }
+        });
+    };
+
+    // Function to check which section is in view
+    const handleScroll = () => {
+        let currentSection = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            const scrollPosition = window.scrollY;
+            
+            // Add some offset for better UX
+            if (scrollPosition >= (sectionTop - sectionHeight/3)) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+        
+        updateActiveLink(currentSection);
+    };
+
+    // Handle click events for smooth scrolling
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Update active state
+                updateActiveLink(targetId);
+            }
+        });
+    });
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Call handleScroll initially to set active state on page load
+    handleScroll();
+
+    // Optional: Add intersection observer for better performance
+    const observerOptions = {
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                updateActiveLink(entry.target.id);
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
+
+</script>
+
+
+
+
+
+
 </body>
 </html>
