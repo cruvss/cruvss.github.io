@@ -12,7 +12,7 @@
 
 <body>
 <header class="header">
-    <a class="cruvs" href="main.html"><span class="logo" >Cruvs</span></a>
+    <a class="cruvs" href="index.html"><span class="logo" >Cruvs</span></a>
     <nav class="navbar">
         <ul>
             
@@ -90,15 +90,32 @@
 
 </section>
 
+<section id="about" class="About-me">
+    <div class="about-container">
+        <div class="about-image">
+            <img src="images/background.jpg" alt="Profile Image">
+        </div>
+        
+        <div class="about-content">
+            <h1>About Me</h1>
+            
+            <p class="about-description">
+                I'm a Machine Learning Developer and Tech Enthusiast passionate about creating AI-powered solutions. 
+                With expertise in Python, TensorFlow, and PyTorch, I focus on developing efficient and scalable ML models.
+            </p>
 
-<section id= "about" class="About-me">
-    <div class="about-me-content">
-        <h2>About Me</h2>
-        <p>
-            I am sachin I am koirala
-        </p>
+            <div class="tabs">
+                <a href="#" class="tab active">Experience</a>
+                <a href="#" class="tab">Education</a>
+            </div>
+
+            <div class="tab-content">
+                <!-- Content will be dynamically inserted here by JavaScript -->
+            </div>
+        </div>
     </div>
 </section>
+
 
 <section class="projects" id="projects">
     <div class="projects-content">
@@ -122,7 +139,7 @@
                             Imgage Steganalysis
 
                         </a>
-                        <span class="project-status-archived">Archived</span>
+                        <!-- <span class="project-status-archived">Archived</span> -->
                     </div>
                     <p class="project-description">Image</p>
                 </div>
@@ -133,7 +150,7 @@
                         <a href="https://github.com/cruvss/Facial_keypoints_detection" target="_blank" class="project-title">
                             Facial Keypoint Detection
                         </a>
-                        <span class="project-status-archived">Archived</span>
+                        <!-- <span class="project-status-archived">Archived</span> -->
                     </div>
                     <p class="project-description">Face Face</p>
                 </div>
@@ -145,7 +162,7 @@
                             Nepali House Price Prediction
               
                         </a>
-                        <span class="project-status-new">Upcoming</span>
+                        <!-- <span class="project-status-new">Upcoming</span> -->
                     </div>
                     <p class="project-description">house house</p>
                 </div>
@@ -590,6 +607,71 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => {
         observer.observe(section);
     });
+});
+
+// -------------------------for about me ----------------------------
+
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.tab');
+    
+    const experienceContent = `
+        <div class="experience-content active">
+            <div class="experience-item">
+                <div class="experience-date">2021 - Current</div>
+                <div class="experience-title">ML Developer</div>
+                <div class="experience-company">Current Company</div>
+            </div>
+        </div>
+    `;
+    
+    const educationContent = `
+        <div class="education-content">
+            <div class="experience-item">
+                <div class="experience-date">2017 - 2021</div>
+                <div class="experience-title"> Computer Science</div>
+                <div class="experience-company">University Name</div>
+            </div>
+        </div>
+    `;
+
+    // Function to update content based on selected tab
+    function updateContent(selectedTab) {
+        const contentContainer = document.querySelector('.tab-content');
+        const currentActive = contentContainer.querySelector('.active');
+        if (currentActive) {
+            currentActive.classList.remove('active');
+        }
+        
+        switch (selectedTab) {
+            case 'Experience':
+                contentContainer.innerHTML = experienceContent;
+                contentContainer.querySelector('.experience-content').classList.add('active');
+                break;
+            case 'Education':
+                contentContainer.innerHTML = educationContent;
+                contentContainer.querySelector('.education-content').classList.add('active');
+                break;
+        }
+    }
+
+    // Add click event listeners to tabs
+    tabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Remove active class from all tabs
+            tabs.forEach(t => t.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            tab.classList.add('active');
+            
+            // Update content based on selected tab
+            updateContent(tab.textContent.trim());
+        });
+    });
+
+    // Set initial content (Experience tab)
+    updateContent('Experience');
 });
 
 </script>

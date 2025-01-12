@@ -265,19 +265,148 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-
+/* -------------------------about me ----------------------------------------- */
 .About-me {
-    display: flex;
-    justify-content: space-between;
-    align-items: top;
-    padding: 0 100px;
     min-height: 100vh;
-    background-color: #000; /* Black background */
+    background-color: #000000;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
 }
 
-.about-me-content {
-    max-width: 50%;
-    color:white;
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.about-image {
+    background-color: #1a1a1a;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.about-description {
+    color: #999;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.tabs {
+    display: flex;
+    gap: 2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+.tab {
+    color: #888;
+    text-decoration: none;
+    padding-bottom: 0.5rem;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.tab.active {
+    color: #ff3366;
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff3366;
+}
+
+.tab-content {
+    min-height: 300px;
+    position: relative;
+}
+
+.education-content,
+.experience-content {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.education-content.active,
+.experience-content.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.experience-date {
+    color: #ff3366;
+    font-size: 1rem;
+}
+
+.experience-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+}
+
+.experience-company {
+    color: #888;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-content h1 {
+        font-size: 3rem;
+    }
+    
+    .About-me {
+        padding: 4rem 1rem;
+    }
 }
 
 /* ---------------------------css for tech page ------------------------------ */
@@ -410,7 +539,49 @@ body {
 }
 
 .project-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-6px);.project-card {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.4s;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.project-title {
+    color: #ccc;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.project-title:hover {
+    color: #fff;
+}
+
+.project-icon {
+    height: 50%; /* Adjust the height to your preference */
+    width: auto; /* Maintain the aspect ratio */
+    transition: transform 0.4s;
+}
+
+.project-card:hover .project-icon {
+    transform: scale(1.2); /* Slightly enlarge the image on hover */
+}
+
+.project-description {
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+  
 }
 
 .project-header {
@@ -438,7 +609,7 @@ body {
     height: 16px;
 }
 
-.project-status-archived{
+/* .project-status-archived{
     background-color: #631d1d;
     color: white;
     padding: 0.25rem 0.75rem;
@@ -452,7 +623,7 @@ body {
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.8rem;
-}
+} */
 
 .project-description {
     color: #888;
@@ -460,12 +631,12 @@ body {
     line-height: 1.5;
 }
 
-
+/* ----------------------------foooter----------------------------------- */
 
 footer {
     background-color: #0b0c10; /* Dark background */
     color: #c5c6c7; /* Light text color */
-    padding: 40px 20px;
+    padding: 40px 20px 2px;
 
   }
   
@@ -500,7 +671,7 @@ footer {
   
   .left-section p i {
     margin-right: 10px;
-    color: #ff2e63; /* Icon color */
+    color: #a8a8a8; /* Icon color */
   }
   
   .social-icons {
@@ -519,7 +690,7 @@ footer {
   }
   
   .btn-download {
-    background-color: #bb882b;
+    background-color: #888888;
     font-size:medium; 
     color: #fff;
     border: none;
@@ -531,8 +702,7 @@ footer {
   }
   
   .btn-download:hover {
-    background-color: #ffa500;
-    color:black;
+    background-color: #a8a8a8;
   }
   
   .right-section input,
@@ -551,7 +721,7 @@ footer {
   }
   
   .btn-submit {
-    background-color: #bb882b;
+    background-color: #888888;
     color: #ffffff;
     font-weight: 200px;
     font-size: medium;
@@ -564,8 +734,8 @@ footer {
   }
   
   .btn-submit:hover {
-    background-color: #ffa500;
-    color:black;
+    background-color: #a8a8a8;
+  
   }
   
   .footer-bottom {
@@ -752,4 +922,8 @@ footer {
     50% {background-position: 0 100%,100% 100%,0    calc(100% - 5px)}
     75% {background-position: 0 100%,100%    0,100% 5px}
 }
+
+
+
+
 
