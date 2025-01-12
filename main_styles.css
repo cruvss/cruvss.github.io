@@ -489,7 +489,7 @@ body {
     }
     
     .about-content h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
     
     .About-me {
@@ -719,6 +719,43 @@ body {
     line-height: 1.5;
 }
 
+
+@media screen and (max-width: 768px) {
+    .projects {
+        padding: 8vh 1.5rem 1.5rem;
+    }
+
+    .projects-content h1 {
+        font-size: 2rem;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects {
+        padding: 8vh 1rem 1rem;
+    }
+
+    .projects-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .project-card {
+        padding: 1.25rem;
+    }
+
+    .project-title {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
 /* ----------------------------foooter----------------------------------- */
 
 footer {
@@ -867,6 +904,14 @@ footer {
     .left-section, .right-section {
         max-width: 100%; /* Full width on small screens */
         text-align: left; /* Center align for better readability */
+    }
+    .right-section input,
+    .right-section textarea {
+        max-width: 92%; /* Allow full width on mobile */
+    }
+    
+    .right-section form {
+        max-width: 92%; /* Allow full width on mobile */
     }
 
     .left-section p {
