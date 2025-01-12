@@ -170,7 +170,26 @@ body {
     opacity: 1;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #6a5acd;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+        z-index: 1000;
+    }
 
+    .navbar.active {
+        display: flex;
+    }
+
+}
 
 
 
@@ -263,6 +282,75 @@ body {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 1024px) {
+    .hero {
+        padding: 20vh 50px 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 3em;
+    }
+    
+    .hero-content .description {
+        font-size: 1.2em;
+    }
+    .hero-image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 20vh 30px 50px; /* Increased top padding for mobile */
+        text-align: center;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 30px;
+        padding-bottom: 0;
+    }
+    
+    .buttons {
+        justify-content: center;
+    }
+    
+    .hero-image {
+        max-width: 60%;
+    }
+    .hero-image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        padding-top: 20vh ; /* Adjusted for smaller screens */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    
+    .hero-content .description {
+        font-size: 1em;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+    }
+    
+    .hero-image {
+        display: none;
+    }
 }
 
 /* -------------------------about me ----------------------------------------- */
@@ -769,7 +857,41 @@ footer {
     transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: left;
+        gap: 30px;
+    }
 
+    .left-section, .right-section {
+        max-width: 100%; /* Full width on small screens */
+        text-align: left; /* Center align for better readability */
+    }
+
+    .left-section p {
+        justify-content: left; /* Center align icons with text */
+    }
+
+    .social-icons a {
+        margin-right: 15px;
+        font-size: 24px; /* Increase size for better touch targets */
+    }
+
+    .btn-download {
+        width: 100%; /* Full width button on small screens */
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+        padding-top: 20px;
+    }
+
+    #go-to-top {
+        bottom: 10px;
+        right: 10px;
+    }
+}
 
 
 

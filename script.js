@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-
     const modeToggle = document.querySelector(".mode-change i");
 
     modeToggle.addEventListener("click", () => {
