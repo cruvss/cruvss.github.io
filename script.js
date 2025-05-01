@@ -168,21 +168,44 @@ document.addEventListener('DOMContentLoaded', function() {
     const experienceContent = `
         <div class="experience-content active">
             <div class="experience-item">
-                <div class="experience-date">2021 - Current</div>
-                <div class="experience-title">ML Developer</div>
-                <div class="experience-company">Current Company</div>
+                <div class="experience-date"> 2023 </div>
+                <div class="experience-title"> IEEE Competitive Programming </div>
             </div>
+            <div class="experience-item">
+                <div class="experience-date"> 2023 </div>
+                <div class="experience-title"> Hult Prize at IOE </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-date"> 2023 </div>
+                <div class="experience-title"> Hult Prize at KhCE </div>
+            </div> 
+
+
         </div>
+
+
     `;
     
     const educationContent = `
         <div class="education-content">
             <div class="experience-item">
-                <div class="experience-date">2017 - 2021</div>
-                <div class="experience-title"> Computer Science</div>
-                <div class="experience-company">University Name</div>
+                <div class="experience-date">2018 - 2020</div>
+                <div class="experience-title">Higher Secondary School, Science Stream</div>
+                <div class="experience-company">National Examination Board (NEB)</div>
+
+            </div>
+            <div class="experience-item">
+            <br>
+                <div class="experience-date">2021 - 2025 </div>
+                <div class="experience-title">Bachelor of Computer Engineering</div>
+                <div class="experience-company">IOE, Tribhuvan University</div>
             </div>
         </div>
+
+  
+        
+
     `;
 
     // Function to update content based on selected tab
