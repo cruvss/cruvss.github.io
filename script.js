@@ -45,10 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
         // Change icon and tooltip text dynamically
         if (document.body.classList.contains("light-mode")) {
             modeToggle.classList.replace("fa-sun", "fa-moon");
-            modeToggle.nextElementSibling.textContent = "Dark Mode";
+            modeToggle.nextElementSibling.textContent = "This feature is not implemented yet 🙂";
         } else {
             modeToggle.classList.replace("fa-moon", "fa-sun");
-            modeToggle.nextElementSibling.textContent = "Light Mode";
+            modeToggle.nextElementSibling.textContent = "This feature is not implemented yet 🙂";
         }
     });
 });
@@ -168,17 +168,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const experienceContent = `
         <div class="experience-content active">
             <div class="experience-item">
-                <div class="experience-date"> 2023 </div>
-                <div class="experience-title"> IEEE Competitive Programming </div>
-            </div>
-            <div class="experience-item">
-                <div class="experience-date"> 2023 </div>
-                <div class="experience-title"> Hult Prize at IOE </div>
+                <div class="experience-date"> July 2025 – Sept 2025 </div>
+                <div class="experience-title"> ML Engineer, NextWave AI </div>
             </div>
 
             <div class="experience-item">
-                <div class="experience-date"> 2023 </div>
-                <div class="experience-title"> Hult Prize at KhCE </div>
+                <div class="experience-date"> May 2025 – June 2025 </div>
+                <div class="experience-title"> ML Intern (Team Lead), NextWave AI </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-date"> Jun 2024 – Dec 2024 </div>
+                <div class="experience-title"> ML Developer, Freelance </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-date"> Dec 2023 - Feb 2024 </div>
+                <div class="experience-title">Technical Lead, Hult Prize at KhCE</div>
             </div> 
 
 
